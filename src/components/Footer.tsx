@@ -2,7 +2,7 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
   const footerLinks = [
-    { label: "Qui sommes-nous ?", href: "#" },
+    { label: "Qui sommes-nous ?", href: "https://lagrandeclasse.fr/", newTab: true },
     { label: "Mentions légales", href: "#" },
     { label: "Plan du site", href: "#" },
     { label: "Contact", href: "#" },
@@ -50,9 +50,12 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                       target={link.newTab ? "_blank" : "_self"}
+                      rel={link.newTab ? "noopener noreferrer" : undefined}
                       className="text-gray-300 hover:text-[#5CC370] transition font-['Open_Sans']"
                     >
                       {link.label}
+                      
                     </a>
                   </li>
                 ))}
