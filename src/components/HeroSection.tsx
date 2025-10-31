@@ -22,15 +22,15 @@ export function HeroSection({ imageUrl }: HeroSectionProps) {
 
           {/* Content */}
           <div className="space-y-4">
-            <h2 className="text-4xl font-['Poppins'] text-[#222222]">
+            <h2 className="text-4xl font-poppins text-[#222222]">
               Halloween, c'est pas pour les petits
             </h2>
-            <p className="text-[#555555] font-['Open_Sans'] leading-relaxed">
+            <p className="text-[#555555] font-open-sans leading-relaxed">
               Si la fête d'Halloween plaît beaucoup aux enfants, elle peut aussi 
               être source d'angoisse pour les plus jeunes. Voici quelques conseils 
               pour adapter cette célébration aux tout-petits et préserver leur bien-être.
             </p>
-            <Button className="bg-[#5CC370] text-white hover:bg-[#4fb360] rounded-lg px-8 font-['Poppins']">
+            <Button className="bg-[#5CC370] text-white hover:bg-[#4fb360] rounded-lg px-8 font-poppins">
               Lire la suite
             </Button>
           </div>

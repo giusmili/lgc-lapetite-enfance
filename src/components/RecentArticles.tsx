@@ -32,10 +32,10 @@ export function RecentArticles({ articles }: RecentArticlesProps) {
                 />
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="text-xl font-['Poppins'] text-[#222222] leading-tight">
+                <h3 className="text-xl font-poppins text-[#222222] leading-tight">
                   {article.title}
                 </h3>
-                <p className="text-[#555555] font-['Open_Sans'] line-clamp-2">
+                <p className="text-[#555555] font-open-sans line-clamp-2">
                   {article.excerpt}
                 </p>
               </div>

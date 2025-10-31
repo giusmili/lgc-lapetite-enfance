@@ -29,12 +29,12 @@ export function Footer() {
         <div className="max-w-7xl mx-auto">
           {/* Partners */}
           <div className="mb-8 pb-8 border-b border-gray-700">
-            <h3 className="text-xl font-['Poppins'] mb-6">Nos partenaires</h3>
+            <h3 className="text-xl font-poppins mb-6">Nos partenaires</h3>
             <div className="flex flex-wrap gap-6 items-center">
               {partners.map((partner) => (
                 <div
                   key={partner}
-                  className="bg-white text-[#222222] px-6 py-3 rounded font-['Poppins']"
+                  className="bg-white text-[#222222] px-6 py-3 rounded font-poppins"
                 >
                   {partner}
                 </div>
@@ -52,7 +52,7 @@ export function Footer() {
                       href={link.href}
                        target={link.newTab ? "_blank" : "_self"}
                       rel={link.newTab ? "noopener noreferrer" : undefined}
-                      className="text-gray-300 hover:text-[#5CC370] transition font-['Open_Sans']"
+                      className="text-gray-300 hover:text-[#5CC370] transition font-open-sans"
                     >
                       {link.label}
                       
@@ -78,7 +78,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm font-['Open_Sans']">
+          <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm font-open-sans">
             © {new Date().getFullYear()} La grande classe : la petite enfance. Tous droits réservés.
           </div>
         </div>

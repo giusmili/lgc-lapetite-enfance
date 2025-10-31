@@ -32,7 +32,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold font-['Poppins']">
+            <h1 className="text-2xl font-bold font-poppins">
               <span className="text-[#5CC370]">La grande classe</span>
               <span className="text-[#222222]"> la petite enfance</span>
             </h1>
@@ -51,7 +51,7 @@ export function Header() {
               <li key={item}>
                 <a
                   href="#"
-                  className="text-[#555555] hover:text-[#5CC370] transition whitespace-nowrap font-['Open Sans']"
+                  className="text-[#555555] hover:text-[#5CC370] transition whitespace-nowrap font-open-sans"
                 >
                   {item}
                 </a>

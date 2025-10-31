@@ -30,10 +30,10 @@ export function InDepthArticles({ articles }: InDepthArticlesProps) {
                 />
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="text-xl font-['Poppins'] text-[#222222] leading-tight">
+                <h3 className="text-xl font-poppins text-[#222222] leading-tight">
                   {article.title}
                 </h3>
-                <p className="text-[#555555] font-['Open_Sans']">
+                <p className="text-[#555555] font-open-sans">
                   {article.excerpt}
                 </p>
               </div>

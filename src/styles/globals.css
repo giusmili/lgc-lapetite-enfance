@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+/* Fonts are self-hosted via next/font in src/app/layout.tsx */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -135,7 +135,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-open-sans), system-ui, sans-serif;
     color: var(--text-gray);
   }
 }
@@ -149,7 +149,7 @@
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-poppins), system-ui, sans-serif;
       color: var(--text-black);
     }
 
@@ -157,7 +157,7 @@
       font-size: var(--text-xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-poppins), system-ui, sans-serif;
       color: var(--text-black);
     }
 
@@ -165,7 +165,7 @@
       font-size: var(--text-lg);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-poppins), system-ui, sans-serif;
       color: var(--text-black);
     }
 
@@ -173,7 +173,7 @@
       font-size: var(--text-base);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-poppins), system-ui, sans-serif;
       color: var(--text-black);
     }
 
@@ -206,3 +206,11 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Utility classes to use next/font variables in JSX */
+.font-poppins { font-family: var(--font-poppins), system-ui, sans-serif; }
+.font-open-sans { font-family: var(--font-open-sans), system-ui, sans-serif; }
+/* Override Tailwind arbitrary font utilities used in code */
+.font-\[\'Poppins\'\] { font-family: var(--font-poppins), system-ui, sans-serif; }
+.font-\[\'Open_Sans\'\] { font-family: var(--font-open-sans), system-ui, sans-serif; }
+.font-\[\'Open\ Sans\'\] { font-family: var(--font-open-sans), system-ui, sans-serif; }
