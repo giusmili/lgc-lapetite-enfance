@@ -1,3 +1,4 @@
+"use client";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface Article {
@@ -45,4 +46,3 @@ export function RecentArticles({ articles }: RecentArticlesProps) {
     </section>
   );
 }
-

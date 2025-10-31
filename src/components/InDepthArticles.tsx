@@ -1,3 +1,4 @@
+"use client";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface InDepthArticle {

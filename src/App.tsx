@@ -1,10 +1,8 @@
-import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { RecentArticles } from './components/RecentArticles';
 import { DossiersSection } from './components/DossiersSection';
 import { InDepthArticles } from './components/InDepthArticles';
 import { Sidebar } from './components/Sidebar';
-import { Footer } from './components/Footer';
 import { BABY_SENSORY_IMG } from './constants/images';
 
 export default function App() {
@@ -153,9 +151,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      
+    <div>
       <main>
         <HeroSection imageUrl={BABY_SENSORY_IMG} />
         
@@ -184,8 +180,6 @@ export default function App() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
