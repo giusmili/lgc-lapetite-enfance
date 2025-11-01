@@ -38,4 +38,6 @@ Notes migration:
 - Prod: `npm start`
 
 Le dossier `build/` hérite de l’ancien setup Vite et n’est plus utilisé. Vous pouvez le supprimer en toute sécurité.
+
+>[Server Deploy](https://lgc-lapetite-enfance.vercel.app/)
   
