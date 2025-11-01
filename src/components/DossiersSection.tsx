@@ -13,12 +13,12 @@ interface DossiersSectionProps {
 
 export function DossiersSection({ dossiers }: DossiersSectionProps) {
   return (
-    <section className="px-4 py-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="section section--white">
+      <div className="container">
         <h2 className="text-4xl font-poppins text-[#222222] mb-8">
           Dossiers
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="tiles">
           {dossiers.map((dossier) => (
             <div
               key={dossier.id}

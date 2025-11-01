@@ -160,16 +160,16 @@ export default function App() {
         <DossiersSection dossiers={dossiers} />
         
         {/* Articles approfondis avec Sidebar */}
-        <section className="px-4 py-12 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-8">
+        <section className="section section--white">
+          <div className="container">
+            <div className="layout-3col">
               {/* Main content - 2 columns */}
-              <div className="lg:col-span-2">
+              <div className="layout-3col__main">
                 <InDepthArticles articles={inDepthArticles} />
               </div>
               
               {/* Sidebar - 1 column */}
-              <div className="lg:col-span-1">
+              <div className="layout-3col__aside">
                 <Sidebar 
                   newsItems={newsItems}
                   agendaItems={agendaItems}

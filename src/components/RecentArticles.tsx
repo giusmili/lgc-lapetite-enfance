@@ -15,10 +15,10 @@ interface RecentArticlesProps {
 
 export function RecentArticles({ articles }: RecentArticlesProps) {
   return (
-    <section className="px-4 py-12 bg-[#F7F7F7]">
-      <div className="max-w-7xl mx-auto">
+    <section className="section section--muted">
+      <div className="container">
         <h2 className="text-3xl font-['Poppins'] text-[#222222] mb-8">Articles récents</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="cards">
           {articles.map((article) => (
             <article
               key={article.id}

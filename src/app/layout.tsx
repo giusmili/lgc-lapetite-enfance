@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../index.css";
 import "@/styles/globals.css";
+import "@/styles/semantic.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Poppins, Open_Sans } from "next/font/google";

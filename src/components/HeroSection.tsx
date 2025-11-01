@@ -8,9 +8,9 @@ interface HeroSectionProps {
 
 export function HeroSection({ imageUrl }: HeroSectionProps) {
   return (
-    <section className="px-4 py-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+    <section className="section section--white section--sm">
+      <div className="container">
+        <div className="layout-split">
           {/* Image */}
           <div className="aspect-[16/9] rounded-lg overflow-hidden">
             <ImageWithFallback

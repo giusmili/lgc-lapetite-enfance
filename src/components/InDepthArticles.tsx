@@ -14,9 +14,9 @@ interface InDepthArticlesProps {
 
 export function InDepthArticles({ articles }: InDepthArticlesProps) {
   return (
-    <section className="px-4 py-12 bg-[#F7F7F7]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6">
+    <section className="section section--muted">
+      <div className="container">
+        <div className="cards">
           {articles.map((article) => (
             <article
               key={article.id}

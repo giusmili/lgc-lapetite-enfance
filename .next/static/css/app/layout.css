@@ -1603,8 +1603,6 @@ html {
   \********************************************************************************************************************************************************************************************************************************************************************/
 /* Fonts are self-hosted via next/font in src/app/layout.tsx */
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   --font-size: 16px;
   --background: #ffffff;
@@ -1690,57 +1688,16 @@ html {
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-input-background: var(--input-background);
-  --color-switch-background: var(--switch-background);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+/* Base styles (Tailwind @apply replaced with plain CSS) */
+* {
+  border-color: var(--border);
+  outline-color: var(--ring);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-open-sans), system-ui, sans-serif;
-    color: var(--text-gray);
-  }
+body {
+  background-color: var(--background);
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  color: var(--text-gray);
 }
 
 /**
@@ -1817,6 +1774,104 @@ html {
 .font-\[\'Poppins\'\] { font-family: var(--font-poppins), system-ui, sans-serif; }
 .font-\[\'Open_Sans\'\] { font-family: var(--font-open-sans), system-ui, sans-serif; }
 .font-\[\'Open\ Sans\'\] { font-family: var(--font-open-sans), system-ui, sans-serif; }
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/styles/semantic.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/* Semantic layout classes to replace Tailwind utilities
+   Adjust values here to customize spacing, widths, and backgrounds. */
+
+/* Containers */
+.container {
+  max-width: 80rem; /* 1280px ~ max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 1rem; /* ~ py-12 px-4 */
+}
+
+.section--sm {
+  padding: 2rem 1rem; /* ~ py-8 px-4 */
+}
+
+.section--white {
+  background-color: #ffffff;
+}
+
+.section--muted {
+  background-color: var(--gray-light);
+}
+
+/* Grids */
+.layout-3col {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem; /* ~ gap-8 */
+}
+
+@media (min-width: 64rem) { /* lg */
+  .layout-3col {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .layout-3col__main {
+    grid-column: span 2 / span 2; /* lg:col-span-2 */
+  }
+  .layout-3col__aside {
+    grid-column: span 1 / span 1; /* lg:col-span-1 */
+  }
+}
+
+.layout-split {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem; /* ~ gap-8 */
+  align-items: center;
+}
+
+@media (min-width: 48rem) { /* md */
+  .layout-split {
+    grid-template-columns: 1fr 1fr; /* md:grid-cols-2 */
+  }
+}
+
+.cards {
+  display: grid;
+  grid-gap: 1.5rem;
+  gap: 1.5rem; /* ~ gap-6 */
+}
+
+@media (min-width: 48rem) { /* md */
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+}
+
+.tiles {
+  display: grid;
+  grid-gap: 1.5rem;
+  gap: 1.5rem; /* ~ gap-6 */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+}
+
+@media (min-width: 48rem) { /* md */
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* md:grid-cols-4 */
+  }
+}
+
+/* Links */
+.link {
+  color: var(--text-gray);
+  transition: color 0.15s ease-in-out;
+}
+
+.link:hover {
+  color: var(--green-primary);
+}
+
 
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Poppins","arguments":[{"subsets":["latin"],"weight":["400","500","600","700"],"display":"swap","variable":"--font-poppins"}],"variableName":"poppins"} ***!
