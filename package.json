@@ -52,7 +52,10 @@
       },
       "scripts": {
             "dev": "next dev -p 3001",
+            "prebuild": "npm run clean",
             "build": "next build",
+            "build:clean": "npm run clean && npm run build",
+            "clean": "node scripts/clean.mjs",
             "start": "next start"
       }
 }
