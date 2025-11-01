@@ -16,7 +16,7 @@
 │   │   └── globals.css         # Variables thèmes & styles globaux
 │   ├── App.tsx                 # Composition de la page d’accueil
 │   ├── Attributions.md
-│   └── index.css               # CSS utilitaires (Tailwind compilé)
+│   └── index.css               # CSS utilitaires 
 ├── next.config.mjs
 ├── next-env.d.ts
 ├── package.json
